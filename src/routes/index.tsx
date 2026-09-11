@@ -67,10 +67,10 @@ function CTA({
     "group inline-flex items-center justify-center gap-2.5 rounded-sm px-7 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 will-change-transform hover:-translate-y-0.5";
   const styles = {
     solid:
-      "bg-ice/95 text-navy-deep shadow-[0_10px_30px_-12px_rgba(10,25,60,0.7)] hover:bg-ice",
+      "bg-gold/95 text-navy-deep shadow-[0_10px_30px_-12px_rgba(10,25,60,0.7)] hover:bg-gold",
     light: "bg-navy text-primary-foreground hover:bg-navy-deep",
     outline:
-      "border border-ice/40 text-primary-foreground hover:border-ice hover:bg-ice/10",
+      "border border-gold/40 text-primary-foreground hover:border-gold hover:bg-gold/10",
   }[variant];
   return (
     <a href={WA} target="_blank" rel="noopener noreferrer" className={`${base} ${styles} ${className}`}>
@@ -216,7 +216,7 @@ function Index() {
         <div className="grid-lines absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-16 pb-14 md:pt-24 md:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-ice/80">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-gold/80">
               Direito Trabalhista
             </p>
             <div className="hairline mt-5 w-24" aria-hidden="true" />
@@ -228,7 +228,7 @@ function Index() {
               cuidadosa de cada caso.
             </p>
 
-            <div className="mt-8 border-l border-ice/25 pl-5">
+            <div className="mt-8 border-l border-gold/25 pl-5">
               <p className="font-display text-lg text-primary-foreground">Rafael Ferreira</p>
               <p className="text-sm tracking-wide text-primary-foreground/60">OAB/SP nº 319.590</p>
             </div>
@@ -243,10 +243,10 @@ function Index() {
 
           <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
             <div
-              className="absolute -inset-3 rounded-sm border border-ice/20"
+              className="absolute -inset-3 rounded-sm border border-gold/20"
               aria-hidden="true"
             />
-            <div className="relative overflow-hidden rounded-sm border border-ice/25 bg-navy">
+            <div className="relative overflow-hidden rounded-sm border border-gold/25 bg-navy">
               <img
                 src={rafael.url}
                 alt="Rafael Ferreira, advogado trabalhista inscrito na OAB/SP nº 319.590"
@@ -351,18 +351,18 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
             <div className="relative">
-              <div className="absolute -inset-2 rounded-sm border border-ice/20" aria-hidden="true" />
+              <div className="absolute -inset-2 rounded-sm border border-gold/20" aria-hidden="true" />
               <img
                 src={rafael.url}
                 alt="Retrato do advogado Rafael Ferreira"
                 loading="lazy"
-                className="relative h-[380px] w-full rounded-sm border border-ice/25 object-cover object-top sm:h-[460px]"
+                className="relative h-[380px] w-full rounded-sm border border-gold/25 object-cover object-top sm:h-[460px]"
               />
             </div>
           </Reveal>
 
           <Reveal delay={80}>
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-ice/80">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold/80">
               Sobre
             </p>
             <h2 className="mt-5 text-3xl leading-tight text-primary-foreground md:text-[2.4rem]">
@@ -486,20 +486,20 @@ function Index() {
               <p className="text-sm text-primary-foreground/60">OAB/SP nº 319.590</p>
             </div>
             <div>
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-ice/70">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-gold/70">
                 WhatsApp
               </p>
               <a
                 href={WA}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 inline-block text-lg text-primary-foreground transition-colors hover:text-ice"
+                className="mt-2 inline-block text-lg text-primary-foreground transition-colors hover:text-gold"
               >
                 (11) 97585-6717
               </a>
             </div>
           </div>
-          <div className="mt-10 border-t border-ice/15 pt-6">
+          <div className="mt-10 border-t border-gold/15 pt-6">
             <p className="text-xs leading-relaxed text-primary-foreground/45">
               Este site possui caráter informativo e não substitui uma consulta jurídica
               individualizada.
