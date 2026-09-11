@@ -77,10 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rafael Ferreira | Advogado Trabalhista" },
-      { name: "author", content: "Rafael Ferreira" },
+      { title: "Rafael Ferreira Advogados | Advogado Trabalhista" },
+      { name: "author", content: "Dr. Rafael Ferreira" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Rafael Ferreira | Advogado Trabalhista" },
+      { property: "og:site_name", content: "Rafael Ferreira Advogados | Advogado Trabalhista" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -94,7 +94,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", type: "image/png", href: "/favicon.png" },
     ],
   }),
   shellComponent: RootShell,

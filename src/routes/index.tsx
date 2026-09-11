@@ -16,21 +16,24 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import rafael from "@/assets/rafael-ferreira.jpg.asset.json";
+import rafaelSobre from "@/assets/rafael-sobre.jpg.asset.json";
+import logoHeader from "@/assets/logo-header.png.asset.json";
+import logoFooter from "@/assets/logo-footer.png.asset.json";
 
 const WA_MSG =
-  "Olá, gostaria de falar com o advogado Rafael Ferreira sobre uma questão trabalhista e receber orientação sobre o meu caso. Poderiam me auxiliar?";
+  "Olá, gostaria de falar com o Dr. Rafael Ferreira sobre uma questão trabalhista e receber orientação sobre o meu caso. Poderiam me auxiliar?";
 const WA = `https://wa.me/5511975856717?text=${encodeURIComponent(WA_MSG)}`;
 
 const DESC =
-  "Rafael Ferreira, advogado inscrito na OAB/SP nº 319.590, com atuação em Direito Trabalhista: rescisão indireta, horas extras, insalubridade, assédio moral, vínculo de emprego e justa causa.";
+  "Dr. Rafael Ferreira, advogado inscrito na OAB/SP nº 319.590, com atuação em Direito Trabalhista: rescisão indireta, horas extras, insalubridade, assédio moral, vínculo de emprego e justa causa.";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Rafael Ferreira | Advogado Trabalhista" },
+      { title: "Dr. Rafael Ferreira | Advogado Trabalhista" },
       { name: "description", content: DESC },
-      { property: "og:title", content: "Rafael Ferreira | Advogado Trabalhista" },
+      { property: "og:title", content: "Dr. Rafael Ferreira | Advogado Trabalhista" },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -43,7 +46,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Attorney",
-          name: "Rafael Ferreira",
+          name: "Dr. Rafael Ferreira",
           description: DESC,
           areaServed: "Brasil",
           knowsAbout: "Direito Trabalhista",
@@ -64,13 +67,14 @@ function CTA({
   className?: string;
 }) {
   const base =
-    "group inline-flex items-center justify-center gap-2.5 rounded-sm px-7 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 will-change-transform hover:-translate-y-0.5";
+    "group inline-flex cursor-pointer items-center justify-center gap-2.5 rounded-[4px] px-7 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 will-change-transform hover:-translate-y-0.5";
   const styles = {
     solid:
-      "bg-ice/95 text-navy-deep shadow-[0_10px_30px_-12px_rgba(10,25,60,0.7)] hover:bg-ice",
-    light: "bg-navy text-primary-foreground hover:bg-navy-deep",
+      "bg-gold text-navy-deep shadow-[0_10px_30px_-14px_rgba(10,25,60,0.75)] hover:bg-gold-soft hover:shadow-[0_16px_34px_-16px_rgba(10,25,60,0.6)]",
+    light:
+      "bg-navy text-primary-foreground hover:bg-navy-deep hover:shadow-[0_14px_30px_-18px_rgba(10,25,60,0.7)]",
     outline:
-      "border border-ice/40 text-primary-foreground hover:border-ice hover:bg-ice/10",
+      "border border-gold/45 text-primary-foreground hover:border-gold hover:bg-gold/10",
   }[variant];
   return (
     <a href={WA} target="_blank" rel="noopener noreferrer" className={`${base} ${styles} ${className}`}>
@@ -210,13 +214,34 @@ function Index() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div id="top" className="min-h-screen bg-background">
       {/* HERO */}
       <header className="navy-surface relative overflow-hidden">
         <div className="grid-lines absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-16 pb-14 md:pt-24 md:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+
+        <div className="relative border-b border-gold/15">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5 md:py-6">
+            <a href="#top" className="flex shrink-0 items-center" aria-label="Rafael Ferreira Advogados">
+              <img
+                src={logoHeader.url}
+                alt="Rafael Ferreira Advogados"
+                className="h-8 w-auto object-contain sm:h-9 md:h-11"
+              />
+            </a>
+            <a
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden cursor-pointer items-center gap-2 rounded-[4px] border border-gold/45 px-5 py-2.5 text-[0.7rem] font-semibold tracking-[0.16em] text-primary-foreground uppercase transition-colors duration-300 hover:border-gold hover:bg-gold/10 sm:inline-flex"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-12 pb-14 md:pt-16 md:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-ice/80">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-gold/80">
               Direito Trabalhista
             </p>
             <div className="hairline mt-5 w-24" aria-hidden="true" />
@@ -228,13 +253,13 @@ function Index() {
               cuidadosa de cada caso.
             </p>
 
-            <div className="mt-8 border-l border-ice/25 pl-5">
-              <p className="font-display text-lg text-primary-foreground">Rafael Ferreira</p>
+            <div className="mt-8 border-l border-gold/25 pl-5">
+              <p className="font-display text-lg text-primary-foreground">Dr. Rafael Ferreira</p>
               <p className="text-sm tracking-wide text-primary-foreground/60">OAB/SP nº 319.590</p>
             </div>
 
             <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              <CTA>Falar com Rafael Ferreira</CTA>
+              <CTA>Falar com o Dr. Rafael Ferreira</CTA>
               <span className="text-sm text-primary-foreground/55">
                 Atendimento jurídico personalizado.
               </span>
@@ -243,13 +268,13 @@ function Index() {
 
           <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
             <div
-              className="absolute -inset-3 rounded-sm border border-ice/20"
+              className="absolute -inset-3 rounded-sm border border-gold/20"
               aria-hidden="true"
             />
-            <div className="relative overflow-hidden rounded-sm border border-ice/25 bg-navy">
+            <div className="relative overflow-hidden rounded-sm border border-gold/25 bg-navy">
               <img
                 src={rafael.url}
-                alt="Rafael Ferreira, advogado trabalhista inscrito na OAB/SP nº 319.590"
+                alt="Dr. Rafael Ferreira, advogado trabalhista inscrito na OAB/SP nº 319.590"
                 width={1280}
                 height={1920}
                 className="h-[420px] w-full object-cover object-top sm:h-[520px] lg:h-[600px]"
@@ -300,12 +325,12 @@ function Index() {
             </h2>
           </Reveal>
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {areas.map((a, i) => (
-              <Reveal key={a.title} delay={(i % 4) * 70}>
-                <article className="group h-full bg-card p-7 transition-colors duration-300 hover:bg-accent/50">
+              <Reveal key={a.title} delay={(i % 4) * 70} className="h-full">
+                <article className="card-premium group h-full p-7">
                   <a.icon
-                    className="h-5 w-5 text-navy-soft transition-transform duration-300 group-hover:-translate-y-0.5"
+                    className="h-5 w-5 text-navy-soft transition-colors duration-300 group-hover:text-[color-mix(in_oklab,var(--gold)_75%,var(--navy))]"
                     strokeWidth={1.5}
                   />
                   <h3 className="mt-6 text-lg leading-snug text-foreground">{a.title}</h3>
@@ -332,10 +357,10 @@ function Index() {
             </p>
           </Reveal>
 
-          <div className="grid gap-px bg-border sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {diferenciais.map((d, i) => (
-              <Reveal key={d.title} delay={i * 70}>
-                <div className="h-full bg-background p-7">
+              <Reveal key={d.title} delay={i * 70} className="h-full">
+                <div className="card-premium h-full p-7">
                   <div className="hairline w-10" aria-hidden="true" />
                   <h3 className="mt-5 text-lg text-foreground">{d.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d.text}</p>
@@ -351,18 +376,18 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
             <div className="relative">
-              <div className="absolute -inset-2 rounded-sm border border-ice/20" aria-hidden="true" />
+              <div className="absolute -inset-2 rounded-[4px] border border-gold/20" aria-hidden="true" />
               <img
-                src={rafael.url}
-                alt="Retrato do advogado Rafael Ferreira"
+                src={rafaelSobre.url}
+                alt="Retrato do Dr. Rafael Ferreira, advogado trabalhista"
                 loading="lazy"
-                className="relative h-[380px] w-full rounded-sm border border-ice/25 object-cover object-top sm:h-[460px]"
+                className="relative h-[420px] w-full rounded-[4px] border border-gold/25 object-cover object-[50%_18%] sm:h-[520px] lg:h-[560px]"
               />
             </div>
           </Reveal>
 
           <Reveal delay={80}>
-            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-ice/80">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.3em] text-gold/80">
               Sobre
             </p>
             <h2 className="mt-5 text-3xl leading-tight text-primary-foreground md:text-[2.4rem]">
@@ -370,7 +395,7 @@ function Index() {
             </h2>
             <div className="mt-7 space-y-5 text-primary-foreground/70">
               <p className="leading-relaxed">
-                Rafael Ferreira é advogado inscrito na OAB/SP sob nº 319.590, com atuação voltada ao
+                O Dr. Rafael Ferreira é advogado inscrito na OAB/SP sob nº 319.590, com atuação voltada ao
                 Direito Trabalhista e à defesa dos direitos de trabalhadores em diferentes
                 situações.
               </p>
@@ -382,7 +407,7 @@ function Index() {
               </p>
             </div>
             <div className="mt-9">
-              <CTA>Falar com Rafael Ferreira</CTA>
+              <CTA>Falar com o Dr. Rafael Ferreira</CTA>
             </div>
           </Reveal>
         </div>
@@ -466,7 +491,7 @@ function Index() {
               Precisa de orientação sobre uma questão trabalhista?
             </h2>
             <p className="mt-5 text-primary-foreground/70">
-              Fale diretamente com Rafael Ferreira e apresente sua situação para uma análise
+              Fale diretamente com o Dr. Rafael Ferreira e apresente sua situação para uma análise
               inicial.
             </p>
             <div className="mt-10 flex justify-center">
@@ -477,32 +502,64 @@ function Index() {
       </section>
 
       {/* RODAPÉ */}
-      <footer className="bg-navy-deep py-14">
+      <footer className="bg-navy-deep py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-col justify-between gap-8 sm:flex-row">
-            <div>
-              <p className="font-display text-lg text-primary-foreground">Rafael Ferreira</p>
-              <p className="text-sm text-primary-foreground/60">Advogado</p>
-              <p className="text-sm text-primary-foreground/60">OAB/SP nº 319.590</p>
+          <div className="grid gap-10 border-b border-gold/15 pb-10 md:grid-cols-[auto_1fr] md:items-start md:gap-16">
+            <div className="flex justify-center md:justify-start">
+              <img
+                src={logoFooter.url}
+                alt="Rafael Ferreira Advogados"
+                loading="lazy"
+                className="h-24 w-auto object-contain md:h-28"
+              />
             </div>
-            <div>
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-ice/70">
-                WhatsApp
-              </p>
-              <a
-                href={WA}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block text-lg text-primary-foreground transition-colors hover:text-ice"
-              >
-                (11) 97585-6717
-              </a>
+
+            <div className="grid gap-8 text-center sm:grid-cols-3 sm:text-left">
+              <div>
+                <p className="font-display text-lg text-primary-foreground">Dr. Rafael Ferreira</p>
+                <p className="mt-1 text-sm text-primary-foreground/60">Advogado</p>
+                <p className="text-sm text-primary-foreground/60">OAB/SP nº 319.590</p>
+              </div>
+
+              <div>
+                <p className="text-[0.68rem] font-semibold tracking-[0.28em] text-gold/80 uppercase">
+                  E-mail
+                </p>
+                <a
+                  href="mailto:contato@rafaelferreiraadvogados.com"
+                  className="mt-2 inline-block text-sm break-all text-primary-foreground/85 transition-colors duration-300 hover:text-gold"
+                >
+                  contato@rafaelferreiraadvogados.com
+                </a>
+                <p className="mt-5 text-[0.68rem] font-semibold tracking-[0.28em] text-gold/80 uppercase">
+                  CNPJ
+                </p>
+                <p className="mt-2 text-sm text-primary-foreground/70">57.422.718/0001-93</p>
+              </div>
+
+              <div>
+                <p className="text-[0.68rem] font-semibold tracking-[0.28em] text-gold/80 uppercase">
+                  WhatsApp
+                </p>
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-lg text-primary-foreground transition-colors duration-300 hover:text-gold"
+                >
+                  (11) 97585-6717
+                </a>
+              </div>
             </div>
           </div>
-          <div className="mt-10 border-t border-ice/15 pt-6">
+
+          <div className="mt-8 flex flex-col gap-4 text-center sm:text-left">
             <p className="text-xs leading-relaxed text-primary-foreground/45">
               Este site possui caráter informativo e não substitui uma consulta jurídica
               individualizada.
+            </p>
+            <p className="text-xs text-primary-foreground/40">
+              © 2026 Rafael Ferreira Advogados Advocacia. Todos os direitos reservados.
             </p>
           </div>
         </div>
@@ -513,7 +570,7 @@ function Index() {
         href={WA}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Falar com Rafael Ferreira pelo WhatsApp"
+        aria-label="Falar com o Dr. Rafael Ferreira pelo WhatsApp"
         className="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whats text-primary-foreground shadow-[0_12px_30px_-8px_rgba(10,25,60,0.55)] transition-transform duration-300 hover:scale-105"
       >
         <MessageCircle className="h-6 w-6" strokeWidth={1.8} />
