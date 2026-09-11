@@ -16,21 +16,24 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import rafael from "@/assets/rafael-ferreira.jpg.asset.json";
+import rafaelSobre from "@/assets/rafael-sobre.jpg.asset.json";
+import logoHeader from "@/assets/logo-header.png.asset.json";
+import logoFooter from "@/assets/logo-footer.png.asset.json";
 
 const WA_MSG =
-  "Olá, gostaria de falar com o advogado Rafael Ferreira sobre uma questão trabalhista e receber orientação sobre o meu caso. Poderiam me auxiliar?";
+  "Olá, gostaria de falar com o Dr. Rafael Ferreira sobre uma questão trabalhista e receber orientação sobre o meu caso. Poderiam me auxiliar?";
 const WA = `https://wa.me/5511975856717?text=${encodeURIComponent(WA_MSG)}`;
 
 const DESC =
-  "Rafael Ferreira, advogado inscrito na OAB/SP nº 319.590, com atuação em Direito Trabalhista: rescisão indireta, horas extras, insalubridade, assédio moral, vínculo de emprego e justa causa.";
+  "Dr. Rafael Ferreira, advogado inscrito na OAB/SP nº 319.590, com atuação em Direito Trabalhista: rescisão indireta, horas extras, insalubridade, assédio moral, vínculo de emprego e justa causa.";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Rafael Ferreira | Advogado Trabalhista" },
+      { title: "Dr. Rafael Ferreira | Advogado Trabalhista" },
       { name: "description", content: DESC },
-      { property: "og:title", content: "Rafael Ferreira | Advogado Trabalhista" },
+      { property: "og:title", content: "Dr. Rafael Ferreira | Advogado Trabalhista" },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -43,7 +46,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Attorney",
-          name: "Rafael Ferreira",
+          name: "Dr. Rafael Ferreira",
           description: DESC,
           areaServed: "Brasil",
           knowsAbout: "Direito Trabalhista",
@@ -64,13 +67,14 @@ function CTA({
   className?: string;
 }) {
   const base =
-    "group inline-flex items-center justify-center gap-2.5 rounded-sm px-7 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 will-change-transform hover:-translate-y-0.5";
+    "group inline-flex cursor-pointer items-center justify-center gap-2.5 rounded-[4px] px-7 py-4 text-[0.78rem] font-semibold uppercase tracking-[0.16em] transition-all duration-300 will-change-transform hover:-translate-y-0.5";
   const styles = {
     solid:
-      "bg-gold/95 text-navy-deep shadow-[0_10px_30px_-12px_rgba(10,25,60,0.7)] hover:bg-gold",
-    light: "bg-navy text-primary-foreground hover:bg-navy-deep",
+      "bg-gold text-navy-deep shadow-[0_10px_30px_-14px_rgba(10,25,60,0.75)] hover:bg-gold-soft hover:shadow-[0_16px_34px_-16px_rgba(10,25,60,0.6)]",
+    light:
+      "bg-navy text-primary-foreground hover:bg-navy-deep hover:shadow-[0_14px_30px_-18px_rgba(10,25,60,0.7)]",
     outline:
-      "border border-gold/40 text-primary-foreground hover:border-gold hover:bg-gold/10",
+      "border border-gold/45 text-primary-foreground hover:border-gold hover:bg-gold/10",
   }[variant];
   return (
     <a href={WA} target="_blank" rel="noopener noreferrer" className={`${base} ${styles} ${className}`}>
