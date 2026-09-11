@@ -491,7 +491,7 @@ function Index() {
               Precisa de orientação sobre uma questão trabalhista?
             </h2>
             <p className="mt-5 text-primary-foreground/70">
-              Fale diretamente com Rafael Ferreira e apresente sua situação para uma análise
+              Fale diretamente com o Dr. Rafael Ferreira e apresente sua situação para uma análise
               inicial.
             </p>
             <div className="mt-10 flex justify-center">
@@ -502,32 +502,64 @@ function Index() {
       </section>
 
       {/* RODAPÉ */}
-      <footer className="bg-navy-deep py-14">
+      <footer className="bg-navy-deep py-16">
         <div className="mx-auto max-w-6xl px-6">
-          <div className="flex flex-col justify-between gap-8 sm:flex-row">
-            <div>
-              <p className="font-display text-lg text-primary-foreground">Rafael Ferreira</p>
-              <p className="text-sm text-primary-foreground/60">Advogado</p>
-              <p className="text-sm text-primary-foreground/60">OAB/SP nº 319.590</p>
+          <div className="grid gap-10 border-b border-gold/15 pb-10 md:grid-cols-[auto_1fr] md:items-start md:gap-16">
+            <div className="flex justify-center md:justify-start">
+              <img
+                src={logoFooter.url}
+                alt="Rafael Ferreira Advogados"
+                loading="lazy"
+                className="h-24 w-auto object-contain md:h-28"
+              />
             </div>
-            <div>
-              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-gold/70">
-                WhatsApp
-              </p>
-              <a
-                href={WA}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-block text-lg text-primary-foreground transition-colors hover:text-gold"
-              >
-                (11) 97585-6717
-              </a>
+
+            <div className="grid gap-8 text-center sm:grid-cols-3 sm:text-left">
+              <div>
+                <p className="font-display text-lg text-primary-foreground">Dr. Rafael Ferreira</p>
+                <p className="mt-1 text-sm text-primary-foreground/60">Advogado</p>
+                <p className="text-sm text-primary-foreground/60">OAB/SP nº 319.590</p>
+              </div>
+
+              <div>
+                <p className="text-[0.68rem] font-semibold tracking-[0.28em] text-gold/80 uppercase">
+                  E-mail
+                </p>
+                <a
+                  href="mailto:contato@rafaelferreiraadvogados.com"
+                  className="mt-2 inline-block text-sm break-all text-primary-foreground/85 transition-colors duration-300 hover:text-gold"
+                >
+                  contato@rafaelferreiraadvogados.com
+                </a>
+                <p className="mt-5 text-[0.68rem] font-semibold tracking-[0.28em] text-gold/80 uppercase">
+                  CNPJ
+                </p>
+                <p className="mt-2 text-sm text-primary-foreground/70">57.422.718/0001-93</p>
+              </div>
+
+              <div>
+                <p className="text-[0.68rem] font-semibold tracking-[0.28em] text-gold/80 uppercase">
+                  WhatsApp
+                </p>
+                <a
+                  href={WA}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 inline-block text-lg text-primary-foreground transition-colors duration-300 hover:text-gold"
+                >
+                  (11) 97585-6717
+                </a>
+              </div>
             </div>
           </div>
-          <div className="mt-10 border-t border-gold/15 pt-6">
+
+          <div className="mt-8 flex flex-col gap-4 text-center sm:text-left">
             <p className="text-xs leading-relaxed text-primary-foreground/45">
               Este site possui caráter informativo e não substitui uma consulta jurídica
               individualizada.
+            </p>
+            <p className="text-xs text-primary-foreground/40">
+              © 2026 Rafael Ferreira Advogados Advocacia. Todos os direitos reservados.
             </p>
           </div>
         </div>
@@ -538,7 +570,7 @@ function Index() {
         href={WA}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Falar com Rafael Ferreira pelo WhatsApp"
+        aria-label="Falar com o Dr. Rafael Ferreira pelo WhatsApp"
         className="fixed right-5 bottom-5 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-whats text-primary-foreground shadow-[0_12px_30px_-8px_rgba(10,25,60,0.55)] transition-transform duration-300 hover:scale-105"
       >
         <MessageCircle className="h-6 w-6" strokeWidth={1.8} />
