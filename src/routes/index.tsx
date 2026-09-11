@@ -325,12 +325,12 @@ function Index() {
             </h2>
           </Reveal>
 
-          <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {areas.map((a, i) => (
-              <Reveal key={a.title} delay={(i % 4) * 70}>
-                <article className="group h-full bg-card p-7 transition-colors duration-300 hover:bg-accent/50">
+              <Reveal key={a.title} delay={(i % 4) * 70} className="h-full">
+                <article className="card-premium group h-full p-7">
                   <a.icon
-                    className="h-5 w-5 text-navy-soft transition-transform duration-300 group-hover:-translate-y-0.5"
+                    className="h-5 w-5 text-navy-soft transition-colors duration-300 group-hover:text-[color-mix(in_oklab,var(--gold)_75%,var(--navy))]"
                     strokeWidth={1.5}
                   />
                   <h3 className="mt-6 text-lg leading-snug text-foreground">{a.title}</h3>
@@ -357,10 +357,10 @@ function Index() {
             </p>
           </Reveal>
 
-          <div className="grid gap-px bg-border sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {diferenciais.map((d, i) => (
-              <Reveal key={d.title} delay={i * 70}>
-                <div className="h-full bg-background p-7">
+              <Reveal key={d.title} delay={i * 70} className="h-full">
+                <div className="card-premium h-full p-7">
                   <div className="hairline w-10" aria-hidden="true" />
                   <h3 className="mt-5 text-lg text-foreground">{d.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{d.text}</p>
@@ -376,12 +376,12 @@ function Index() {
         <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
             <div className="relative">
-              <div className="absolute -inset-2 rounded-sm border border-gold/20" aria-hidden="true" />
+              <div className="absolute -inset-2 rounded-[4px] border border-gold/20" aria-hidden="true" />
               <img
-                src={rafael.url}
-                alt="Retrato do advogado Rafael Ferreira"
+                src={rafaelSobre.url}
+                alt="Retrato do Dr. Rafael Ferreira, advogado trabalhista"
                 loading="lazy"
-                className="relative h-[380px] w-full rounded-sm border border-gold/25 object-cover object-top sm:h-[460px]"
+                className="relative h-[420px] w-full rounded-[4px] border border-gold/25 object-cover object-[50%_18%] sm:h-[520px] lg:h-[560px]"
               />
             </div>
           </Reveal>
@@ -395,7 +395,7 @@ function Index() {
             </h2>
             <div className="mt-7 space-y-5 text-primary-foreground/70">
               <p className="leading-relaxed">
-                Rafael Ferreira é advogado inscrito na OAB/SP sob nº 319.590, com atuação voltada ao
+                O Dr. Rafael Ferreira é advogado inscrito na OAB/SP sob nº 319.590, com atuação voltada ao
                 Direito Trabalhista e à defesa dos direitos de trabalhadores em diferentes
                 situações.
               </p>
@@ -407,7 +407,7 @@ function Index() {
               </p>
             </div>
             <div className="mt-9">
-              <CTA>Falar com Rafael Ferreira</CTA>
+              <CTA>Falar com o Dr. Rafael Ferreira</CTA>
             </div>
           </Reveal>
         </div>
