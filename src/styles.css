@@ -39,6 +39,7 @@
   --color-navy-soft: var(--navy-soft);
   --color-steel: var(--steel);
   --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
   --color-whats: var(--whats);
   --font-display: "Fraunces", Georgia, serif;
   --font-sans: "Manrope", system-ui, sans-serif;
@@ -116,7 +117,7 @@
   background-image:
     radial-gradient(
       120% 80% at 78% 10%,
-      color-mix(in oklab, var(--gold) 22%, transparent),
+      color-mix(in oklab, var(--gold) 12%, transparent),
       transparent 60%
     ),
     radial-gradient(
