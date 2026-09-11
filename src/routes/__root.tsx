@@ -77,10 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rafael Ferreira | Advogado Trabalhista" },
-      { name: "author", content: "Rafael Ferreira" },
+      { title: "Rafael Ferreira Advogados | Advogado Trabalhista" },
+      { name: "author", content: "Dr. Rafael Ferreira" },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Rafael Ferreira | Advogado Trabalhista" },
+      { property: "og:site_name", content: "Rafael Ferreira Advogados | Advogado Trabalhista" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

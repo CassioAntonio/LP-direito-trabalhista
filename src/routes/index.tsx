@@ -214,7 +214,7 @@ function Index() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div id="top" className="min-h-screen bg-background">
       {/* HERO */}
       <header className="navy-surface relative overflow-hidden">
         <div className="grid-lines absolute inset-0 opacity-60" aria-hidden="true" />
@@ -274,7 +274,7 @@ function Index() {
             <div className="relative overflow-hidden rounded-sm border border-gold/25 bg-navy">
               <img
                 src={rafael.url}
-                alt="Rafael Ferreira, advogado trabalhista inscrito na OAB/SP nº 319.590"
+                alt="Dr. Rafael Ferreira, advogado trabalhista inscrito na OAB/SP nº 319.590"
                 width={1280}
                 height={1920}
                 className="h-[420px] w-full object-cover object-top sm:h-[520px] lg:h-[600px]"
