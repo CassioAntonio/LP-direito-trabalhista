@@ -218,7 +218,28 @@ function Index() {
       {/* HERO */}
       <header className="navy-surface relative overflow-hidden">
         <div className="grid-lines absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-16 pb-14 md:pt-24 md:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+
+        <div className="relative border-b border-gold/15">
+          <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5 md:py-6">
+            <a href="#top" className="flex shrink-0 items-center" aria-label="Rafael Ferreira Advogados">
+              <img
+                src={logoHeader.url}
+                alt="Rafael Ferreira Advogados"
+                className="h-8 w-auto object-contain sm:h-9 md:h-11"
+              />
+            </a>
+            <a
+              href={WA}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden cursor-pointer items-center gap-2 rounded-[4px] border border-gold/45 px-5 py-2.5 text-[0.7rem] font-semibold tracking-[0.16em] text-primary-foreground uppercase transition-colors duration-300 hover:border-gold hover:bg-gold/10 sm:inline-flex"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-6 pt-12 pb-14 md:pt-16 md:pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div>
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-gold/80">
               Direito Trabalhista
@@ -233,12 +254,12 @@ function Index() {
             </p>
 
             <div className="mt-8 border-l border-gold/25 pl-5">
-              <p className="font-display text-lg text-primary-foreground">Rafael Ferreira</p>
+              <p className="font-display text-lg text-primary-foreground">Dr. Rafael Ferreira</p>
               <p className="text-sm tracking-wide text-primary-foreground/60">OAB/SP nº 319.590</p>
             </div>
 
             <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              <CTA>Falar com Rafael Ferreira</CTA>
+              <CTA>Falar com o Dr. Rafael Ferreira</CTA>
               <span className="text-sm text-primary-foreground/55">
                 Atendimento jurídico personalizado.
               </span>
