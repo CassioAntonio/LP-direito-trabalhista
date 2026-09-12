@@ -15,6 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
+import { GoogleReviews } from "@/components/GoogleReviews";
 import rafael from "@/assets/rafael-ferreira.jpg.asset.json";
 import rafaelSobre from "@/assets/rafael-sobre.jpg.asset.json";
 import logoHeader from "@/assets/logo-header.png.asset.json";
@@ -370,6 +371,9 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* AVALIAÇÕES DO GOOGLE */}
+      <GoogleReviews />
 
       {/* SOBRE */}
       <section className="navy-surface relative overflow-hidden py-20 md:py-28">
