@@ -506,7 +506,7 @@ function Index() {
       </section>
 
       {/* RODAPÉ */}
-      <footer className="bg-navy-deep py-16">
+      <footer className="bg-navy-deep pt-16 pb-28 sm:py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 border-b border-gold/15 pb-10 md:grid-cols-[auto_1fr] md:items-start md:gap-16">
             <div className="flex justify-center md:justify-start">
