@@ -246,12 +246,12 @@ function Index() {
               Direito Trabalhista
             </p>
             <div className="hairline mt-5 w-24" aria-hidden="true" />
-            <h1 className="mt-6 text-[2.1rem] leading-[1.12] text-primary-foreground sm:text-5xl lg:text-[3.35rem]">
-              Problemas trabalhistas exigem orientação estratégica.
-            </h1>
-            <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/70">
+            <h1 className="mt-6 max-w-2xl text-[2rem] leading-[1.1] text-primary-foreground sm:text-[2.75rem] lg:text-[3.15rem]">
               Atuação jurídica especializada na defesa dos direitos do trabalhador, com análise
               cuidadosa de cada caso.
+            </h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-primary-foreground/75 sm:text-lg">
+              Problemas trabalhistas exigem orientação estratégica.
             </p>
 
             <div className="mt-8 border-l border-gold/25 pl-5">
@@ -506,7 +506,7 @@ function Index() {
       </section>
 
       {/* RODAPÉ */}
-      <footer className="bg-navy-deep py-16">
+      <footer className="bg-navy-deep pt-16 pb-28 sm:py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div className="grid gap-10 border-b border-gold/15 pb-10 md:grid-cols-[auto_1fr] md:items-start md:gap-16">
             <div className="flex justify-center md:justify-start">
@@ -556,6 +556,35 @@ function Index() {
               </div>
             </div>
           </div>
+
+          <section aria-labelledby="unidades-title" className="border-b border-gold/15 py-10">
+            <h2
+              id="unidades-title"
+              className="text-center text-2xl text-primary-foreground sm:text-left"
+            >
+              Nossas Unidades
+            </h2>
+            <div className="mt-7 grid gap-7 md:grid-cols-3 md:gap-10">
+              <address className="border-l border-gold/25 pl-4 not-italic">
+                <p className="font-display text-base text-primary-foreground">São Paulo — SP</p>
+                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/60">
+                  R. das Grumixamas, 99 — Parque Jabaquara
+                </p>
+              </address>
+              <address className="border-l border-gold/25 pl-4 not-italic">
+                <p className="font-display text-base text-primary-foreground">Itaú de Minas — MG</p>
+                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/60">
+                  Av. Liberdade, 1145
+                </p>
+              </address>
+              <address className="border-l border-gold/25 pl-4 not-italic">
+                <p className="font-display text-base text-primary-foreground">Passos — MG</p>
+                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/60">
+                  Av. Arlindo Figueiredo, 128 — São Francisco
+                </p>
+              </address>
+            </div>
+          </section>
 
           <div className="mt-8 flex flex-col gap-4 text-center sm:text-left">
             <p className="text-xs leading-relaxed text-primary-foreground/45">
