@@ -16,10 +16,10 @@ import {
 } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 import { GoogleReviews } from "@/components/GoogleReviews";
-import rafael from "@/assets/rafael-ferreira.jpg.asset.json";
-import rafaelSobre from "@/assets/rafael-sobre.jpg.asset.json";
-import logoHeader from "@/assets/logo-header.png.asset.json";
-import logoFooter from "@/assets/logo-footer.png.asset.json";
+import rafael from "@/assets/rafael-ferreira.jpg";
+import rafaelSobre from "@/assets/rafael-sobre.jpg";
+import logoHeader from "@/assets/logo-header.png";
+import logoFooter from "@/assets/logo-footer.png";
 
 const WA_MSG =
   "Olá, gostaria de falar com o Dr. Rafael Ferreira sobre uma questão trabalhista e receber orientação sobre o meu caso. Poderiam me auxiliar?";
@@ -224,7 +224,7 @@ function Index() {
           <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-5 md:py-6">
             <a href="#top" className="flex shrink-0 items-center" aria-label="Rafael Ferreira Advogados">
               <img
-                src={logoHeader.url}
+                src={logoHeader}
                 alt="Rafael Ferreira Advogados"
                 className="h-8 w-auto object-contain sm:h-9 md:h-11"
               />
@@ -274,7 +274,7 @@ function Index() {
             />
             <div className="relative overflow-hidden rounded-sm border border-gold/25 bg-navy">
               <img
-                src={rafael.url}
+                src={rafael}
                 alt="Dr. Rafael Ferreira, advogado trabalhista inscrito na OAB/SP nº 319.590"
                 width={1280}
                 height={1920}
@@ -382,7 +382,7 @@ function Index() {
             <div className="relative">
               <div className="absolute -inset-2 rounded-[4px] border border-gold/20" aria-hidden="true" />
               <img
-                src={rafaelSobre.url}
+                src={rafaelSobre}
                 alt="Retrato do Dr. Rafael Ferreira, advogado trabalhista"
                 loading="lazy"
                 className="relative h-[420px] w-full rounded-[4px] border border-gold/25 object-cover object-[50%_18%] sm:h-[520px] lg:h-[560px]"
@@ -511,7 +511,7 @@ function Index() {
           <div className="grid gap-10 border-b border-gold/15 pb-10 md:grid-cols-[auto_1fr] md:items-start md:gap-16">
             <div className="flex justify-center md:justify-start">
               <img
-                src={logoFooter.url}
+                src={logoFooter}
                 alt="Rafael Ferreira Advogados"
                 loading="lazy"
                 className="h-24 w-auto object-contain md:h-28"
