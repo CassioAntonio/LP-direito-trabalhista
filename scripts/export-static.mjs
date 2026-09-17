@@ -30,19 +30,12 @@ async function walk(dir) {
 }
 
 for (const file of await walk(out)) {
-  const inAssets = file.includes(`${join(out, "assets")}`);
-  const prefix = inAssets ? "./" : "./assets/";
   const original = await readFile(file, "utf8");
-  let next = original
-    .replaceAll('"/assets/', `"${prefix}`)
-    .replaceAll("'/assets/", `'${prefix}`)
-    .replaceAll("(/assets/", `(${prefix}`)
-    .replaceAll("`/assets/", `\`${prefix}`);
-  if (!inAssets) {
-    next = next.replaceAll('"/favicon.png"', '"./favicon.png"');
-  } else {
-    next = next.replaceAll('"/favicon.png"', '"../favicon.png"');
-  }
+  const next = original
+    .replaceAll('"/./assets/', '"./assets/')
+    .replaceAll("'/./assets/", "'./assets/")
+    .replaceAll('"/favicon.png"', '"./favicon.png"')
+    .replaceAll('"/robots.txt"', '"./robots.txt"');
   if (next !== original) await writeFile(file, next);
 }
 
