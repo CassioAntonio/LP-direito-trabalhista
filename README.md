@@ -1,4 +1,4 @@
-Landing Page para o advogado Rafael Ferreira, utilizando como referência estrutural e de conversão a identidade visual, textos e composição próprios.
+Landing Page de campanha 100% voltadada para o direito trabalhista, pensada para leads nas redes sociais do advogado Rafael Ferreira, utilizando como referência estrutural e de conversão a identidade visual, textos e composição próprios.
 
 ## Development
 
