@@ -563,7 +563,7 @@ function Index() {
             >
               Nossas Unidades
             </h2>
-            <div className="mt-7 grid gap-7 md:grid-cols-3 md:gap-10">
+            <div className="mt-7 grid gap-7 md:grid-cols-2 md:gap-10">
               <address className="border-l border-gold/25 pl-4 not-italic">
                 <p className="font-display text-base text-primary-foreground">São Paulo — SP</p>
                 <p className="mt-2 text-sm leading-relaxed text-primary-foreground/60">
@@ -574,12 +574,6 @@ function Index() {
                 <p className="font-display text-base text-primary-foreground">Itaú de Minas — MG</p>
                 <p className="mt-2 text-sm leading-relaxed text-primary-foreground/60">
                   Av. Liberdade, 1145
-                </p>
-              </address>
-              <address className="border-l border-gold/25 pl-4 not-italic">
-                <p className="font-display text-base text-primary-foreground">Passos — MG</p>
-                <p className="mt-2 text-sm leading-relaxed text-primary-foreground/60">
-                  Av. Arlindo Figueiredo, 128 — São Francisco
                 </p>
               </address>
             </div>
